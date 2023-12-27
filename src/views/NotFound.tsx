@@ -1,6 +1,6 @@
 import { PropType, defineComponent } from "vue";
-import s from "./NotFound.module.scss"
-import { NResult } from "naive-ui";
+import s from "./NotFound.module.scss";
+import { Result, Button } from "ant-design-vue";
 
 export const NotFound = defineComponent({
   props: {
@@ -11,11 +11,11 @@ export const NotFound = defineComponent({
   setup() {
     return () => (
       <div class={s.wrapper}>
-        <NResult
-          status="404"
-          title="404 资源不存在"
-          description="生活总归带点荒谬"
-        ></NResult>
+        <Result
+          status="403"
+          title="403"
+          sub-title="Sorry, you are not authorized to access this page."
+        ></Result>
       </div>
     );
   },
