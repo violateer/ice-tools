@@ -9,6 +9,7 @@ body {
     "Noto Sans CJK SC", "Source Han Sans SC", "Source Han Sans CN",
     "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti",
     SimHei, "WenQuanYi Zen Hei Sharp", sans-serif;
+  background-color: #f1f1f1;
 }
 
 ::webkit-scrollbar {
@@ -23,4 +24,13 @@ body {
     padding-left: 16px;
     padding-right: 16px;
   }
+}
+
+// 覆盖ant-design-vue样式
+.ant-tabs {
+  height: 100%;
+}
+
+.ant-tabs-content {
+  height: 100%;
 }
