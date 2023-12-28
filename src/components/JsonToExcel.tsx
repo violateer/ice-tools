@@ -31,6 +31,8 @@ export const JsonToExcel = defineComponent({
         dealData(json);
       } catch (error: any) {
         if (String(error).includes("SyntaxError")) {
+          console.log(error);
+
           message.warning("JSON字符串格式不正确！");
         } else {
           message.warning(error?.message);
@@ -40,8 +42,7 @@ export const JsonToExcel = defineComponent({
 
     // 处理数据
     const dealData = (data: any[]) => {
-      refData.value = [];
-      refColumns.value = [];
+      clearData(false);
 
       data.forEach((row) => {
         refData.value.push(row);
@@ -56,6 +57,14 @@ export const JsonToExcel = defineComponent({
           }
         });
       });
+    };
+
+    // 清空数据
+    const clearData = (isClearJson = true) => {
+      if (isClearJson) refJsonContent.value = "";
+
+      refData.value = [];
+      refColumns.value = [];
     };
 
     // 判断是对象构成的数组
@@ -105,7 +114,7 @@ export const JsonToExcel = defineComponent({
             <DownloadOutlined />
             下载Excel
           </Button>
-          <Button type="dashed" size={"middle"}>
+          <Button type="dashed" size={"middle"} onClick={() => clearData()}>
             清空
           </Button>
         </div>
