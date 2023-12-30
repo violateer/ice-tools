@@ -1,6 +1,6 @@
 import { PropType, defineComponent } from "vue";
 import s from "./NotFound.module.scss";
-import { Result, Button } from "ant-design-vue";
+import { Result } from "ant-design-vue";
 
 export const NotFound = defineComponent({
   props: {

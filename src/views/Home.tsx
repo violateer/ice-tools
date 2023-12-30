@@ -9,7 +9,7 @@ export const Home = defineComponent({
       type: String as PropType<string>,
     },
   },
-  setup(props, context) {
+  setup() {
     const refActiveKey = ref("1");
     const refTabPosition = ref<TabsProps["tabPosition"]>("top");
     return () => (

@@ -10,9 +10,11 @@
   },
   "dependencies": {
     "ant-design-vue": "^4.0.8",
+    "dayjs": "^1.11.10",
     "sass": "1.69.5",
     "vue": "3.3.11",
-    "vue-router": "4.2.5"
+    "vue-router": "4.2.5",
+    "xlsx": "0.18.5"
   },
   "devDependencies": {
     "@types/node": "20.10.5",

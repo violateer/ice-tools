@@ -27,10 +27,9 @@ body {
 }
 
 // 覆盖ant-design-vue样式
-.ant-tabs {
-  height: 100%;
-}
-
-.ant-tabs-content {
+.ant-tabs,
+.ant-tabs-content,
+.ant-spin-nested-loading,
+.ant-spin-container {
   height: 100%;
 }
